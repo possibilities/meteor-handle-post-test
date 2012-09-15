@@ -12,6 +12,8 @@ __meteor_bootstrap__.app
       if (splitUrl[1] !== '_twilio')
         return next();
 
+      Messages.insert(req.body);
+
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.end('', 'utf-8');
 
