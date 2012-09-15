@@ -1,0 +1,21 @@
+<head>
+  <title>handle-post-test</title>
+</head>
+
+<body>
+  {{> demo}}
+</body>
+
+<template name="demo">
+  <h1>Twillio Demo!</h1>
+  
+  {{#if messages/count}}
+  {{#each messages}}
+    <p>Message {{Body}}</p>
+    <p>From {{From}}</p>
+    <hr>
+  {{/each}}
+  {{else}}
+    <p>No messages!</p>
+  {{/if}}
+</template>
